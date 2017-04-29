@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
+import { Artist } from '../models/artist';
 
 @Injectable()
-export class LastService {
+export class GrcMusicService {
 
+  
   constructor() { }
 
 }

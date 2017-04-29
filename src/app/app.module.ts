@@ -16,6 +16,10 @@ import { ObjetiveComponent } from './components/objetive/objetive.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
+//Services
+import { GrcMusicService } from './services/grc-music.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
