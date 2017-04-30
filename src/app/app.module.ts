@@ -19,6 +19,9 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 //Services
 import { GrcMusicService } from './services/grc-music.service';
 
+// Pipes
+import { WithoutPicturePipe } from './pipes/without-picture.pipe';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { GrcMusicService } from './services/grc-music.service';
     ArtistComponent,
     ObjetiveComponent,
     AboutMeComponent,
-    NavbarComponent
+    NavbarComponent,
+    WithoutPicturePipe
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,9 @@ import { GrcMusicService } from './services/grc-music.service';
     HttpModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    GrcMusicService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

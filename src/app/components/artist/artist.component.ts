@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GrcMusicService } from '../../services/grc-music.service';
 
 @Component({
   selector: 'app-artist',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtistComponent implements OnInit {
 
-  constructor() { }
+  artist = {};
+
+  constructor( private _grcMusicService: GrcMusicService ) { }
 
   ngOnInit() {
+    this.artist = this._grcMusicService.getArtist();
+    console.log("artist ",this.artist);
   }
 
 }

@@ -18,15 +18,17 @@
       <table class="table">
       <thead class="thead-default">
         <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-          <th>Header 3</th>
+          <th>Desde</th>
+          <th>Nombre</th>
+          <th>Popularidad</th>
+          <th>Ver</th>
         </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>Cell</td>
-        <td>Cell</td>
+      <tr *ngFor="let artist of listArtist">
+        <td>{{ artist.from }}</td>
+        <td>{{ artist.name }}</td>
+        <td>{{ artist.followers }}</td>
         <td><a class="nav-link" [routerLink]="['/artist']">Ir a artista</a></td>
       </tr>
       </tbody>
