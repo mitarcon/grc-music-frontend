@@ -14,7 +14,22 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row margin-top-30" *ngIf="searching">
+      <div class="col-md-5 col-centered">
+        <img src="assets/img/progress.gif"
+              class="img-circle mx-auto d-block big-logo"
+              alt="GRC-music">
+      </div>
+    </div>
+
+    <div class="row margin-top-30"
+      *ngIf="listArtist.length === 0 && !searching">
+      <div class="col-md-12 margin-top-30">
+        <h3>No hay coincidencias en la busqueda</h3>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="listArtist.length > 0">
       <table class="table">
       <thead class="thead-default">
         <tr>
@@ -29,6 +44,7 @@
         <td>{{ artist.from }}</td>
         <td>{{ artist.name }}</td>
         <td>{{ artist.followers }}</td>
+        <!-- https://angular.io/docs/ts/latest/guide/router.html#!#query-parameters -->
         <td><a class="nav-link" [routerLink]="['/artist']">Ir a artista</a></td>
       </tr>
       </tbody>
