@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Artist } from '../models/artist';
+import { Parameter } from '../models/parameter';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -23,7 +24,8 @@ export class GrcMusicService {
       });
   }
 
-  search(){
+  search( param: Parameter ){
+    console.log(" param ",param);
     let url = 'http://www.localhost:4201/artist?query=daddy&code=asdds';
 
     return this._http.get( url )
